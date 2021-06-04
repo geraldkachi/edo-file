@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+:root {
+  --main-font-p: 16px;
+  --main-font-c: 14px;
+  --main-font-h2: 40px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f8fdfc;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: url(/FontsFree-Net-cor3.ttf);
+  /* src: url(./cera-pro-sv); */
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.herocontainer {
+  background-color: white;
+  min-height: 100.5vh;
+  /* background-color: violet; */
+}
+header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 65px;
+  margin-left: 65px;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+.logo {
+  margin: 15px 0;
+}
+nav ul li {
+  padding-left: 40px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 17.57px;
+  color: #121113;
+}
+@media only screen and (max-width: 800px) {
+  nav ul {
+    display: none;
+  }
+  header {
+    margin-left: 30px;
+  }
+}
+nav ul li a {
+  color: #121113;
+}
+
+.herobody {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 22px 0 69px;
+}
+.circleface {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  border-radius: 50%;
+  max-width: 100;
+  width: 80%;
+  height: auto;
+  margin-left: 72px;
+}
+.heroface {
+  position: absolute;
+  top: 60px; /* 0 */
+  max-width: 100;
+  width: 80%;
+  height: 100%;
+  margin-left: 72px;
+}
+.create {
+  width: 50%;
+  margin-right: 10px;
+  flex-wrap: wrap;
+  display: block;
+}
+.create h6 {
+  /* margin-top: 44px; */
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Cera Pro";
+}
+.create p {
+  margin-top: 34px;
+  margin-bottom: 34px;
+  color: #000000;
+  font-family: "Mulish", sans-serif;
+  font-size: 20px;
+}
+.create button {
+  background-color: #20c7ab;
+  padding: 20px 35px;
+  border-radius: 12px;
+  font-size: 17px;
+  color: white;
+  border: none;
+}
+.homebody {
+  width: 1100px;
+  margin: auto;
+  margin-top: 60px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .homebody {
+    width: auto;
+    margin: auto;
+    margin-top: 60px;
+  }
+}
+@media only screen and (max-width: 655px) {
+  .homebody {
+    width: auto;
+  }
+  .herocontainer {
+    min-height: 116vh;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .herobody {
+    display: block;
+    margin: 0 52px 0 30px;
+  }
+  .circleface {
+    margin-left: unset;
+    width: 100%;
+  }
+  .heroface {
+    top: 0;
+    max-width: 100;
+    width: 100%;
+    height: auto;
+    margin-left: unset;
+  }
+  .create {
+    width: 100%;
+  }
+  .create h6 {
+    font-size: 40px;
+    margin: 0px;
+  }
+  .create p {
+    font-size: 16px;
+  }
+  .create button {
+    margin: 20px 0;
+    /* padding: 5px 90px; */
+  }
+}
+/* initiatives */
+.initiatives {
+  /* height: 120hv; */
+  margin: 69px 0;
+}
+.initiativesHead {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Cera pro";
+}
+.initiativesHead h2 {
+  font-size: var(--main-font-h2);
+}
+.initiativesHead div {
+  width: 12%;
+  height: 2px;
+  margin-left: 10px;
+  background-color: black;
+}
+
+.initiativesContainer {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 48px 0px;
+  /* width: 60%; */
+  overflow: hidden;
+}
+.initiativesContainer img {
+  max-width: 100;
+  width: 100%;
+  height: auto;
+}
+
+.initiativesContainer1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 48px 0px;
+  overflow: hidden;
+  margin: 48px;
+}
+.initiativesContainer1 img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.initiativesContainer1 h3 {
+  margin: 12px 0;
+  font-size: 20px;
+}
+.initiativescard {
+  margin: 15px 0px;
+  background-color: white;
+  padding: 20px;
+  background: #ffffff;
+  font-family: "Mulish", sans-serif;
+  box-shadow: 0px 14px 54px rgba(0, 0, 0, 0.02);
+  border-radius: 28px;
+  width: 300px;
+  height: 450px;
+}
+.initiativesContainer1 .initiativescard {
+  /* margin-right: 48px;` */
+  margin: 20px 48px 20px 0px;
+}
+.initiativescard h3 {
+  margin: 30px 0 15px 0;
+  font-size: 25px;
+}
+.initiativescard p {
+  flex-wrap: wrap;
+  margin: 15px 0;
+  color: #777777;
+}
+@media only screen and (max-width: 850px) {
+  .initiatives {
+    margin: 69px 0;
+  }
+  .initiativesContainer,
+  .initiativesContainer1 {
+    display: block;
+    margin: 48px 0px;
+    /* width: auto; */
+  }
+  /* .initiativesContainer1 { */
+  /* display: block; */
+  /* margin: 48px 0x; */
+  /* width: auto; */
+  /* } */
+  .initiativesContainer1 > div {
+    margin: 20px 0;
+  }
+  .initiativescard {
+    margin: auto;
+    width: auto;
+    height: 100%;
+    margin: 20px;
+  }
+  .initiativesContainer1 .initiativescard {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .initiativesHead {
+    margin-top: 60px;
+    margin-left: 20px;
+  }
+}
+.fashion {
+  border-radius: 12px;
+}
+.insights {
+  margin: 69px 0px;
+}
+.insightshead div {
+  width: 12%;
+  height: 2px;
+  margin-left: 10px;
+  background-color: black;
+}
+.insightshead {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.insightshead h2 {
+  font-size: var(--main-font-h2);
+  margin: 12px 10px;
+  font-family: "Cera Pro";
+}
+.insightshead div {
+  width: 12%;
+  height: 2px;
+  margin-left: 10px;
+  background-color: black;
+}
+.CreativeEconomy {
+}
+.CreativeEconomy h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  font-family: "Cera Pro";
+}
+.CreativeEconomy p {
+  text-align: left;
+  /* margin-right: 100px; */
+}
+.edo-create {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  border-radius: 30px;
+  margin: auto;
+  padding: 10px 30px;
+  width: 800px;
+}
+@media only screen and (max-width: 800px) {
+  .CreativeEconomy p {
+    font-size: var(--main-font-p);
+    margin-right: auto;
+  }
+  .CreativeEconomy h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-right: auto;
+  }
+  .insights {
+    margin: 69px 0;
+  }
+  .edo-create {
+    display: block;
+    width: auto;
+  }
+}
+.edo-create > div {
+  padding: 0 12px;
+  margin: 12px;
+  width: unset;
+  flex-wrap: wrap;
+}
+.rec {
+  /* width: 414px; */
+  /* height: 342px; */
+  /* width: 100%; */
+  /* height: auto; */
+  /* padding: 20px; */
+  /* box-shadow: 0px 14px 54px rgba(0, 0, 0, 0.02); */
+  /* border-radius: 28px; */
+
+  border-radius: 20px;
+  background-color: #20c7ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  height: max-content;
+  margin: auto;
+  overflow: hidden;
+}
+.rec img {
+  padding: 30px 400px;
+  border-radius: 40px;
+}
+.covidimg {
+  /* top: 50px; */
+  /* left: 200px; */
+  /* z-index: 999px; */
+  width: 300px;
+}
+
+@media only screen and (max-width: 700px) {
+  .rec img {
+    width: 100px;
+    padding: 20px;
+  }
+  .covidimg {
+    width: 100%;
+    height: auto;
+  }
+}
+/* Footer */
+.footer {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
+  padding: 30px;
+}
+.footerlist {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+    display: flex;
+  }
+  .footerlist {
+    display: inline;
+  }
+  .footerlist ul {
+    margin: 20px;
+  }
+  .footerlist ul li {
+    margin: 10px;
+  }
+  .footeremail {
+    display: inline-block;
+  }
+}
+.footer ul li {
+  padding-right: 10px;
+}
+.footer ul {
+  list-style: none;
+  margin-right: 30px;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+  font-size: var(--main-font-c);
+}
+.footeremail {
+  margin-right: 100px;
+}
+input[type="email"] {
+  width: 100%;
+  padding-left: 25px;
+  transition: all 0.15s ease-in;
+}
+input[type="submit"] {
+  background-color: #20c7ab;
+  color: #fff;
+  border: 1px solid transparent;
+  font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: 700;
+  line-height: 37px;
+  letter-spacing: 0;
+  text-align: left;
+}
+@media only screen and (max-width: 600px) {
+  .footer ul {
+    display: block;
+  }
+  input[type="email"] {
+    width: 100%;
+    padding-right: 200px;
+  }
+}

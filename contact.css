@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*  header and nav */
+body {
+  background-color: #f8fdfc;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+header {
+  /* background-color: white; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 65px;
+  margin-left: 65px;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+.logo {
+  margin: 15px 0;
+}
+nav ul li {
+  padding-left: 40px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 17.57px;
+  color: #121113;
+}
+@media only screen and (max-width: 800px) {
+  nav ul {
+    display: none;
+  }
+}
+nav ul li a {
+  color: #121113;
+}
+/* contactbody */
+.contactbody {
+  margin: 400px 0;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 600px;
+  margin: auto;
+}
+.contactbody h1 {
+  display: block;
+  margin: 30px 0;
+}
+.contactbody form input {
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 18px;
+  background-color: rgb(242, 242, 242);
+}
+.contactbody form textarea {
+  width: 100%;
+padding: 20px;
+margin: 10px 0;
+border: none;
+border-radius: 18px;
+background-color: rgb(242, 242, 242);
+}
+.contactbody form input[type="submit"]  {
+  background-color: #20C7AB;
+  width: 30%;
+  text-align: center;
+}
+@media only screen and (max-width: 800px) {
+  .contactbody {
+    margin: 20px;
+    width: auto;
+    height: auto;
+  }
+  .contactbody form input[type="submit"]  {
+    padding: 10px 20px ;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
+  padding: 30px;
+
+  /*  this to make the footer always stay on the footer of the page permanently */
+  /* position: fixed; */
+  /* left: 0; */
+  /* bottom: 0; */
+  /* width: 100%; */
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    display: flex;
+  }
+  .footerlist {
+    display: block;
+  }
+  .footerlist ul {
+    margin: 5px;
+  }
+  .footeremail {
+    display: inline-block;
+  }
+}
+.footer ul li {
+  padding-right: 10px;
+}
+.footer ul {
+  list-style: none;
+  margin-right: 30px;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+  font-size: var(--main-font-c);
+}
+.footerlist {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footeremail {
+  margin-right: 100px;
+}
+input[type="email"] {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 35px;
+  transition: all 0.15s ease-in;
+}
+input[type="submit"] {
+  background-color: #20c7ab;
+  color: #fff;
+  border: 1px solid transparent;
+  font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: 700;
+  line-height: 37px;
+  letter-spacing: 0;
+  text-align: left;
+}
+@media only screen and (max-width: 600px) {
+  .footer ul {
+    display: block;
+  }
+  input[type="email"] {
+    width: 100%;
+    padding-right: 200px;
+  }
+}

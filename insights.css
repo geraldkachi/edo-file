@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*  header and nav */
+body {
+  background-color: #e5e5e5;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.herocontainer {
+  background-color: white;
+  min-height: 100.5vh;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 65px;
+  margin-left: 65px;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+.logo {
+  margin: 15px 0;
+}
+nav ul li {
+  padding-left: 40px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 17.57px;
+  color: #121113;
+}
+@media only screen and (max-width: 800px) {
+  nav ul {
+    display: none;
+  }
+}
+
+nav ul li a {
+  color: #121113;
+}
+
+/* end header */
+
+.insightbody {
+  max-width: 800px;
+  margin: auto;
+}
+.covidcon img {
+  width: 100%;
+  height: 100%;
+}
+
+.longptext p {
+  font-size: 14px;
+  line-height: 25px;
+}
+.insighthead {
+  /* margin: 20px 50px; */
+  /* width: 70%;   */
+  /*  look into it */
+}
+.insighthead h3 {
+  margin: 20px 0;
+  text-align: left;
+}
+.global {
+  margin: 60px 0;
+}
+.global h2 {
+  margin: 30px 0;
+}
+.global p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+@media only screen and (max-width: 850px) {
+  .insightbody {
+    max-width: none;
+    margin: 30px 30px;
+    width: auto;
+  }
+  .insighthead {
+    width: unset;
+    margin: 30px;
+  }
+  .covidcon img {
+    width: 100%;
+    height: 100%;
+  }
+  /* p{ */
+  /* margin: 30px 30px; */
+  /* } */
+}
+p {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  color: #515151;
+}
+
+/* Footer */
+.footer {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
+  padding: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+    display: flex;
+  }
+  .footerlist {
+    display: block;
+  }
+  .footerlist ul {
+    margin: 5px;
+  }
+  .footeremail {
+    display: inline-block;
+  }
+}
+.footer ul li {
+  padding-right: 10px;
+}
+.footer ul {
+  list-style: none;
+  margin-right: 30px;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+  font-size: var(--main-font-c);
+}
+.footerlist {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footeremail {
+  margin-right: 100px;
+}
+input[type="email"] {
+  width: 100%;
+  padding-left: 25px;
+  transition: all 0.15s ease-in;
+}
+input[type="submit"] {
+  background-color: #20c7ab;
+  color: #fff;
+  border: 1px solid transparent;
+  font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: 700;
+  line-height: 37px;
+  letter-spacing: 0;
+  text-align: left;
+}
+@media only screen and (max-width: 600px) {
+  .footer ul {
+    display: block;
+  }
+  input[type="email"] {
+    width: 100%;
+    padding-right: 200px;
+  }
+}

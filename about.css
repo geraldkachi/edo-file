@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-font-p: 16px;
+  --main-font-c: 16px;
+  --main-font-h2: 40px;
+}
+body {
+  background-color: #f8fdfc;
+}
+.logo {
+  margin: 15px 0;
+  cursor: pointer;
+}
+.logo:hover {
+  background-color: transparent;
+}
+.aboutheader {
+  background-color: black;
+  /* height: 269px; */
+}
+header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 65px;
+  margin-left: 65px;
+  background-color: black;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  padding-left: 40px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 17.57px;
+  color: #121113;
+}
+.aboutvector {
+  background-color: black;
+}
+.aboutvector img {
+  width: 100%;
+  height: 100%;
+  /* max-width: 100%; */
+}
+.aboutheight {
+  background-color: black;
+}
+.about h1 {
+  font-size: var(--main-font-h2);
+  color: white;
+  margin-left: 120px;
+  bottom: 100px;
+  height: 150px;
+}
+.aboutbody {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.aboutpage{
+  width: 1100px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1100px) {
+  .aboutbody {
+    margin: 70px 30px;
+  }
+  nav ul {
+    display: none;
+  }
+  header {
+    margin-left: 10px;
+
+  }
+  .about h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    bottom: 10px;
+    height: 70px;
+  }
+  .aboutpage{
+  width: auto;
+  }
+}
+/*  softpower */
+.softpower {
+  margin: 80px 0;
+  text-align: center;
+}
+.softpower h1 {
+  margin-bottom: 20px;
+  font-size: var(--main-font-h2);
+  margin: 30px 0 30px 100px;
+}
+.softpower p {
+  line-height: 25px;
+  text-align: center;
+  font-size: var(--main-font-p);
+}
+/* industry */
+.industry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+}
+.industry h1 {
+  font-size: var(--main-font-h2);
+  margin: 0px 20px 0;
+}
+.industry p {
+  line-height: 25px;
+  font-size: var(--main-font-p);
+  margin: 20px 0px 60px 0px;
+  font-family: "Mulish", sans-serif;
+}
+/* soeft and industry */
+@media only screen and (max-width: 800px) {
+  .softpower h1 {
+    font-size: 30px;
+  }
+  .industry h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+/* Perspective */
+.perspective {
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 279px; */
+  padding: 20px;
+  margin: 80px 0;
+}
+.perspective h3 {
+  width: 50%;
+  margin: 20px 200px 20px 0;
+  font-size: 20px;
+}
+.perspective p {
+  line-height: 25px;
+  margin: 30px 25px 30px 0;
+  font-size: 16px;
+}
+.perspective img {
+  width: 300px;
+  height: 300px;
+  border-radius: 28px;
+}
+.strategy {
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 279px;
+  padding: 20px;
+  margin: 80px 0;
+}
+.strategy h3 {
+  width: 50%;
+  margin: 20px 0 20px 0 ;
+  font-size: 20px;
+}
+.strategy p {
+   line-height: 25px;
+  font-size: 16px;
+}
+.strategy img {
+  width: 300px;
+  height: 300px;
+  border-radius: 28px;
+}
+.objectiveBody{
+background-color: white;
+margin: 80px 0;
+}
+.objectivewidth {
+  width: 1100px;
+  margin: auto;
+}
+.Objectdash {
+  margin: 80px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Objectdash div {
+  width: 12%;
+  height: 2px;
+  margin-left: 10px;
+  background-color: black;
+}
+.objectives {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 56px;
+  border: 1px solid black;
+  margin: 30px 150px 60px 150px;
+  padding: 36px;
+}
+.objectives p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-left: 100px;
+}
+
+.colorcircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: 10px; */
+  padding: 40px;
+  margin: auto;
+}
+.colorcircle1 {
+  color: white;
+  font-size: 60px;
+}
+.Objectdash{
+margin-left: 70px;
+}
+@media only screen and (max-width: 1100px) {
+  .objectivewidth {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .objectives p {
+    margin-left: unset;
+    margin-top: 30px;
+  }
+  .industry {
+    display: block;
+  }
+  .strategy {
+    display: block;
+    height: unset;
+  }
+  .strategy img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+  .strategy p {
+    font-size: 14px;
+  }
+  .perspective {
+    display: block;
+    height: unset;
+  }
+  .perspective img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+  .perspective p {
+    margin-right: unset;
+    margin-left: unset;
+  }
+
+  .objectives {
+    display: block;
+    margin: 30px 0 60px 0;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .objectives {
+    margin: 30px 10px 60px 10px;
+  }
+}
+
+/* footer */
+.footer {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
+  padding: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+    display: flex;
+  }
+
+  .footerlist {
+    display: inline;
+  }
+  .footerlist ul {
+    margin: 15px;
+  }
+  .footeremail {
+    display: block;
+  }
+}
+.footer ul li {
+  padding-right: 10px;
+}
+.footer ul {
+  list-style: none;
+  margin-right: 30px;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+  font-size: var(--main-font-c);
+}
+.footerlist {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footeremail {
+  margin-right: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer ul {
+    display: block;
+    margin: 20px 0;
+  }
+  input[type="email"] {
+    width: auto;
+    padding: auto;
+    display: block;
+  }
+  
+}
+input[type="email"] {
+  width: 100%;
+  padding-left: 25px;
+}
+input[type="submit"] {
+  background-color: #20c7ab;
+  color: #fff;
+  border: 1px solid transparent;
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: 700;
+  line-height: 37px;
+  letter-spacing: 0;
+  text-align: left;
+}
+@media only screen and (max-width: 600px) {
+  input[type="email"] {
+    width: 100%;
+    padding-right: 200px;
+  }
+}
