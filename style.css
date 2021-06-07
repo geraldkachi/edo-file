@@ -251,6 +251,7 @@ nav ul li a {
   /* width: 300px; */
   flex-basis: 300px;
   height: 500px;
+  overflow: hidden;
 }
 .initimgh {
   min-height: 200px;
@@ -272,7 +273,7 @@ nav ul li a {
   line-height: 157.7%;
   padding: 0 20px;
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 650px) {
   .initiatives {
     margin: 69px 0;
   }
@@ -292,8 +293,8 @@ nav ul li a {
   }
   .initiativescard {
     margin: auto;
-    /* width: auto; */
-    /* height: 100%; */
+    width: auto;
+    height: 100%;
     margin: 20px;
   }
   .initiativesContainer1 .initiativescard {
