@@ -251,6 +251,9 @@ nav ul li a {
   width: 300px;
   height: 500px;
 }
+.initimgh {
+  min-height: 200px;
+}
 .initiativesContainer1 .initiativescard {
   /* margin-right: 48px;` */
   margin: 20px 48px 20px 0px;
