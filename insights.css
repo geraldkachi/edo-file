@@ -52,6 +52,9 @@ nav ul li {
   nav ul {
     display: none;
   }
+  header {
+    margin-left: 10px;
+  }
 }
 
 nav ul li a {

@@ -49,6 +49,9 @@ nav ul li {
   nav ul {
     display: none;
   }
+  header {
+    margin-left: 10px;
+  }
 }
 nav ul li a {
   color: #121113;
@@ -76,16 +79,30 @@ nav ul li a {
 }
 .contactbody form textarea {
   width: 100%;
-padding: 20px;
-margin: 10px 0;
-border: none;
-border-radius: 18px;
-background-color: rgb(242, 242, 242);
+  padding: 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 18px;
+  background-color: rgb(242, 242, 242);
 }
-.contactbody form input[type="submit"]  {
-  background-color: #20C7AB;
+/* .contactbody form input[type="submit"]  { */
+.contactbody form .send {
+  background-color: #20c7ab;
   width: 30%;
-  text-align: center;
+  border: none;
+  color: white;
+  font-family: "Cera Pro";
+  padding: 20px 30px;
+  border-radius: 12px;
+
+  text-transform: capitalize;
+  color: rgb(242, 242, 242);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease 0s;
+  font-weight: bold;
+  font-size: 16px;
 }
 @media only screen and (max-width: 800px) {
   .contactbody {
@@ -93,8 +110,10 @@ background-color: rgb(242, 242, 242);
     width: auto;
     height: auto;
   }
-  .contactbody form input[type="submit"]  {
-    padding: 10px 20px ;
+  .contactbody form .send {
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: 50%;
   }
 }
 

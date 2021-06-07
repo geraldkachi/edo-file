@@ -55,6 +55,9 @@ nav ul li a {
   nav ul {
     display: none;
   }
+  header {
+    margin-left: 10px;
+  }
 }
 
 .initbody {
