@@ -11,6 +11,11 @@
 body {
   background-color: #f8fdfc;
 }
+@font-face {
+  font-family: "Cera Pro";
+  src: url(/FontsFree-Net-cor3.ttf);
+  /* src: url(./cera-pro-sv); */
+}
 .logo {
   margin: 15px 0;
   cursor: pointer;
@@ -74,17 +79,20 @@ nav ul li {
   background-color: black;
 }
 .about h1 {
-  font-size: var(--main-font-h2);
+  /* font-size: var(--main-font-h2); */
   color: white;
-  margin-left: 120px;
-  bottom: 100px;
+  margin-left: 170px;
+  font-family: "Cera Pro";
   height: 150px;
+  /* font-size: 62.32px; */
+  font-size: 52px;
+  line-height: 107.7%;
 }
 .aboutbody {
   margin-left: 100px;
   margin-right: 100px;
 }
-.aboutpage{
+.aboutpage {
   width: 1100px;
   margin: auto;
 }
@@ -98,7 +106,6 @@ nav ul li {
   }
   header {
     margin-left: 10px;
-
   }
   .about h1 {
     font-size: 30px;
@@ -107,8 +114,8 @@ nav ul li {
     bottom: 10px;
     height: 70px;
   }
-  .aboutpage{
-  width: auto;
+  .aboutpage {
+    width: auto;
   }
 }
 /*  softpower */
@@ -192,11 +199,11 @@ nav ul li {
 }
 .strategy h3 {
   width: 50%;
-  margin: 20px 0 20px 0 ;
+  margin: 20px 0 20px 0;
   font-size: 20px;
 }
 .strategy p {
-   line-height: 25px;
+  line-height: 25px;
   font-size: 16px;
 }
 .strategy img {
@@ -204,9 +211,9 @@ nav ul li {
   height: 300px;
   border-radius: 28px;
 }
-.objectiveBody{
-background-color: white;
-margin: 80px 0;
+.objectiveBody {
+  background-color: white;
+  margin: 80px 0;
 }
 .objectivewidth {
   width: 1100px;
@@ -255,8 +262,8 @@ margin: 80px 0;
   color: white;
   font-size: 60px;
 }
-.Objectdash{
-margin-left: 70px;
+.Objectdash {
+  margin-left: 70px;
 }
 @media only screen and (max-width: 1100px) {
   .objectivewidth {
@@ -319,23 +326,34 @@ margin-left: 70px;
   align-items: center;
   padding: 30px;
 }
+.footerlist {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 @media only screen and (max-width: 600px) {
   .footer {
     display: flex;
   }
-
   .footerlist {
     display: inline;
   }
   .footerlist ul {
-    margin: 15px;
+    margin: 20px;
+  }
+  .footerlist ul li {
+    margin: 10px;
   }
   .footeremail {
-    display: block;
+    display: inline-block;
   }
 }
 .footer ul li {
   padding-right: 10px;
+  margin: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Mulish";
 }
 .footer ul {
   list-style: none;
@@ -344,37 +362,27 @@ margin-left: 70px;
   font-family: "Mulish", sans-serif;
   font-size: var(--main-font-c);
 }
-.footerlist {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
 .footeremail {
   margin-right: 100px;
 }
-
-@media only screen and (max-width: 600px) {
-  .footer ul {
-    display: block;
-    margin: 20px 0;
-  }
-  input[type="email"] {
-    width: auto;
-    padding: auto;
-    display: block;
-  }
-  
+.footeremail h2 {
+  margin: 20px 0 20px 0;
+  text-align: left;
+  font-family: "Mulish";
+  font-size: 30px;
 }
 input[type="email"] {
   width: 100%;
   padding-left: 25px;
+  transition: all 0.15s ease-in;
 }
-input[type="submit"] {
+/* input[type="submit"] */
+.buttonsub {
   background-color: #20c7ab;
   color: #fff;
   border: 1px solid transparent;
-  font-family: Mulish;
-  font-size: 16px;
+  font-family: "Mulish";
+  font-size: 14px;
   font-style: normal;
   padding-right: 10px;
   padding-left: 10px;
@@ -384,6 +392,12 @@ input[type="submit"] {
   text-align: left;
 }
 @media only screen and (max-width: 600px) {
+  .footer ul {
+    display: block;
+  }
+  .footer ul li {
+    margin: 10px 0;
+  }
   input[type="email"] {
     width: 100%;
     padding-right: 200px;

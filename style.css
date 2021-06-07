@@ -11,7 +11,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #f8fdfc;
+  /* background-color: #f8fdfc; */
+  background-color: #e5e5e5;
 }
 @font-face {
   font-family: "Cera Pro";
@@ -70,7 +71,7 @@ nav ul li a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 0 22px 0 69px;
+  margin: 0 22px 0 129px;
 }
 .circleface {
   max-width: 100%;
@@ -98,8 +99,7 @@ nav ul li a {
   display: block;
 }
 .create h6 {
-  /* margin-top: 44px; */
-  font-size: 50px;
+  font-size: 62.32px;
   font-weight: 700;
   font-family: "Cera Pro";
 }
@@ -109,6 +109,10 @@ nav ul li a {
   color: #000000;
   font-family: "Mulish", sans-serif;
   font-size: 20px;
+  line-height: 174.7%;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: left;
 }
 .create button {
   background-color: #20c7ab;
@@ -117,6 +121,8 @@ nav ul li a {
   font-size: 17px;
   color: white;
   border: none;
+  font-family: "Cera Pro";
+  line-height: 107.7%;
 }
 .homebody {
   width: 1100px;
@@ -131,18 +137,26 @@ nav ul li a {
     margin-top: 60px;
   }
 }
-@media only screen and (max-width: 655px) {
+@media only screen and (max-width: 765px) {
   .homebody {
     width: auto;
   }
   .herocontainer {
-    min-height: 116vh;
+    /* min-height: 116vh; */
+    min-height: 131.5vh;
+    overflow: hidden;
   }
 }
 @media only screen and (max-width: 850px) {
+  .herocontainer {
+    /* min-height: 116vh; */
+    min-height: 131.5vh;
+    overflow: hidden;
+  }
   .herobody {
     display: block;
     margin: 0 52px 0 30px;
+    width: auto;
   }
   .circleface {
     margin-left: unset;
@@ -157,6 +171,7 @@ nav ul li a {
   }
   .create {
     width: 100%;
+    margin-bottom: 50px;
   }
   .create h6 {
     font-size: 40px;
@@ -222,6 +237,7 @@ nav ul li a {
 .initiativesContainer1 h3 {
   margin: 12px 0;
   font-size: 20px;
+
 }
 .initiativescard {
   margin: 15px 0px;
@@ -232,7 +248,7 @@ nav ul li a {
   box-shadow: 0px 14px 54px rgba(0, 0, 0, 0.02);
   border-radius: 28px;
   width: 300px;
-  height: 450px;
+  height: 480px;
 }
 .initiativesContainer1 .initiativescard {
   /* margin-right: 48px;` */
@@ -246,6 +262,8 @@ nav ul li a {
   flex-wrap: wrap;
   margin: 15px 0;
   color: #777777;
+  font-size: var(--main-font-p);
+  line-height: 157.7%;
 }
 @media only screen and (max-width: 850px) {
   .initiatives {
@@ -309,8 +327,7 @@ nav ul li a {
   margin-left: 10px;
   background-color: black;
 }
-.CreativeEconomy {
-}
+/* .CreativeEconomy {} */
 .CreativeEconomy h2 {
   font-size: 25px;
   margin-bottom: 20px;
@@ -319,6 +336,9 @@ nav ul li a {
 }
 .CreativeEconomy p {
   text-align: left;
+  color: #777777;
+  font-size: var(--main-font-p);
+  line-height: 157.7%;
   /* margin-right: 100px; */
 }
 .edo-create {
@@ -431,6 +451,10 @@ nav ul li a {
 }
 .footer ul li {
   padding-right: 10px;
+  margin: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Mulish";
 }
 .footer ul {
   list-style: none;
@@ -442,16 +466,23 @@ nav ul li a {
 .footeremail {
   margin-right: 100px;
 }
+.footeremail h2 {
+  margin: 20px 0 20px 0;
+  text-align: left;
+  font-family: "Mulish";
+  font-size: 30px;
+}
 input[type="email"] {
   width: 100%;
   padding-left: 25px;
   transition: all 0.15s ease-in;
 }
-input[type="submit"] {
+/* input[type="submit"] */
+.buttonsub {
   background-color: #20c7ab;
   color: #fff;
   border: 1px solid transparent;
-  font-family: Mulish;
+  font-family: "Mulish";
   font-size: 14px;
   font-style: normal;
   padding-right: 10px;
@@ -464,6 +495,9 @@ input[type="submit"] {
 @media only screen and (max-width: 600px) {
   .footer ul {
     display: block;
+  }
+  .footer ul li {
+    margin: 10px 0;
   }
   input[type="email"] {
     width: 100%;
