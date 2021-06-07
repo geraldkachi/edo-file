@@ -241,15 +241,15 @@ nav ul li a {
 
 }
 .initiativescard {
-  margin: 15px 0px;
+  margin: 15px 10px;
   background-color: white;
-  padding: 20px;
+  /* padding: 20px; */
   background: #ffffff;
   font-family: "Mulish", sans-serif;
   box-shadow: 0px 14px 54px rgba(0, 0, 0, 0.02);
   border-radius: 28px;
   width: 300px;
-  height: 480px;
+  height: 500px;
 }
 .initiativesContainer1 .initiativescard {
   /* margin-right: 48px;` */
@@ -258,6 +258,7 @@ nav ul li a {
 .initiativescard h3 {
   margin: 30px 0 15px 0;
   font-size: 25px;
+  padding: 0 20px;
 }
 .initiativescard p {
   flex-wrap: wrap;
@@ -265,6 +266,7 @@ nav ul li a {
   color: #777777;
   font-size: var(--main-font-p);
   line-height: 157.7%;
+  padding: 0 20px;
 }
 @media only screen and (max-width: 850px) {
   .initiatives {
@@ -369,6 +371,8 @@ nav ul li a {
   .edo-create {
     display: block;
     width: auto;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 .edo-create > div {
@@ -407,7 +411,7 @@ nav ul li a {
   width: 300px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   .rec img {
     width: 100px;
     padding: 20px;

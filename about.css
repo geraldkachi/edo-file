@@ -211,9 +211,10 @@ nav ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 279px;
+  /* height: 279px; */
   padding: 20px;
   margin: 80px 0;
+  min-height: 280px;
 }
 .strategy h3 {
   width: 50%;
@@ -232,11 +233,15 @@ nav ul li {
 }
 .objectiveBody {
   background-color: white;
-  margin: 80px 0;
+  margin-top: 80px;
+  /* margin-bottom: 80px; */
+  
 }
 .objectivewidth {
   width: 1100px;
   margin: auto;
+  background-color: white;
+  padding-bottom: 80px;
 }
 .Objectdash h1 {
   font-family: "Cera Pro";
@@ -259,7 +264,7 @@ nav ul li {
   align-items: center;
   border-radius: 56px;
   border: 1px solid black;
-  margin: 30px 150px 60px 150px;
+  margin: 30px 150px 0px 150px;
   padding: 36px;
 }
 .objectives p {
@@ -329,12 +334,12 @@ nav ul li {
 
   .objectives {
     display: block;
-    margin: 30px 0 60px 0;
+    margin: 30px 0 0px 0;
   }
 }
 @media only screen and (max-width: 1000px) {
   .objectives {
-    margin: 30px 30px 60px 30px;
+    margin: 30px 30px 0px 30px;
   }
 }
 
