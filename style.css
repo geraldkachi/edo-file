@@ -248,7 +248,8 @@ nav ul li a {
   font-family: "Mulish", sans-serif;
   box-shadow: 0px 14px 54px rgba(0, 0, 0, 0.02);
   border-radius: 28px;
-  width: 300px;
+  /* width: 300px; */
+  flex-basis: 300px;
   height: 500px;
 }
 .initimgh {
@@ -291,8 +292,8 @@ nav ul li a {
   }
   .initiativescard {
     margin: auto;
-    width: auto;
-    height: 100%;
+    /* width: auto; */
+    /* height: 100%; */
     margin: 20px;
   }
   .initiativesContainer1 .initiativescard {
@@ -358,6 +359,12 @@ nav ul li a {
   padding: 10px 30px;
   width: 800px;
 }
+.edo-create > div {
+  padding: 0 12px;
+  margin: 12px 0;
+  width: unset;
+  flex-wrap: wrap;
+}
 @media only screen and (max-width: 800px) {
   .CreativeEconomy p {
     font-size: var(--main-font-p);
@@ -367,6 +374,7 @@ nav ul li a {
     font-size: 25px;
     margin-bottom: 20px;
     margin-right: auto;
+    /* text-align: center; */
   }
   .insights {
     margin: 69px 0;
@@ -377,12 +385,12 @@ nav ul li a {
     margin-right: 20px;
     margin-left: 20px;
   }
-}
-.edo-create > div {
-  padding: 0 12px;
-  margin: 12px;
-  width: unset;
-  flex-wrap: wrap;
+  .edo-create > div {
+    /* padding: 0 12px; */
+    /* margin: 12px; */
+    width: unset;
+    flex-wrap: wrap;
+  }
 }
 .rec {
   /* width: 414px; */
