@@ -73,17 +73,19 @@ nav ul li {
 .aboutvector img {
   width: 100%;
   height: 100%;
-  /* max-width: 100%; */
 }
 .aboutheight {
   background-color: black;
 }
+.about{
+  height: 150px;
+}
 .about h1 {
-  /* font-size: var(--main-font-h2); */
   color: white;
   margin-left: 170px;
   font-family: "Cera Pro";
-  height: 150px;
+  top: 400px;
+ 
   /* font-size: 62.32px; */
   font-size: 52px;
   line-height: 107.7%;
@@ -126,7 +128,9 @@ nav ul li {
 .softpower h1 {
   margin-bottom: 20px;
   font-size: var(--main-font-h2);
-  margin: 30px 0 30px 100px;
+  margin: 30px 0 30px 0px;
+  font-family: "Cera Pro";
+  text-align: center;
 }
 .softpower p {
   line-height: 25px;
@@ -143,21 +147,33 @@ nav ul li {
 .industry h1 {
   font-size: var(--main-font-h2);
   margin: 0px 20px 0;
+  margin: 10px;
+  font-family: "Cera Pro";
+  /* width: 50%; */
 }
 .industry p {
   line-height: 25px;
   font-size: var(--main-font-p);
-  margin: 20px 0px 60px 0px;
+  /* margin: 20px 0px 60px 0px; */
+  margin: auto;
   font-family: "Mulish", sans-serif;
+  width: 90%;
 }
 /* soeft and industry */
 @media only screen and (max-width: 800px) {
   .softpower h1 {
     font-size: 30px;
   }
+  .industry p {
+    width: unset;
+    margin: 20px 0px 60px 0px;
+    text-align: center;
+  }
   .industry h1 {
     font-size: 30px;
     text-align: center;
+    width: unset;
+    margin: 0px 20px 0;
   }
 }
 
@@ -176,6 +192,7 @@ nav ul li {
   width: 50%;
   margin: 20px 200px 20px 0;
   font-size: 20px;
+  font-family: "Cera Pro";
 }
 .perspective p {
   line-height: 25px;
@@ -201,6 +218,7 @@ nav ul li {
   width: 50%;
   margin: 20px 0 20px 0;
   font-size: 20px;
+  font-family: "Cera Pro";
 }
 .strategy p {
   line-height: 25px;
@@ -218,6 +236,9 @@ nav ul li {
 .objectivewidth {
   width: 1100px;
   margin: auto;
+}
+.Objectdash h1 {
+  font-family: "Cera Pro";
 }
 .Objectdash {
   margin: 80px 0;
@@ -271,6 +292,7 @@ nav ul li {
   }
 }
 @media only screen and (max-width: 850px) {
+  
   .objectives p {
     margin-left: unset;
     margin-top: 30px;
@@ -311,7 +333,7 @@ nav ul li {
 }
 @media only screen and (max-width: 1000px) {
   .objectives {
-    margin: 30px 10px 60px 10px;
+    margin: 30px 30px 60px 30px;
   }
 }
 
