@@ -249,4 +249,9 @@ var myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14]]
 
 //  the second array gets the items in the first set fo array in the first child on the array selected
 // which is the [{1}, 2, 3]
-var myData = myArray[0][0]
+// var myData = myArray[0][0]
+var myData = myArray[2][1]
+console.log(myData); //8
+
+// Manipulate Arrays with push()
+
