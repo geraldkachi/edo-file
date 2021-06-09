@@ -1,3 +1,20 @@
+//  in js 7 seven different data types 
+/* Data Type 
+ 7 types
+undefined, null, boolean, string, symbol, number, and object
+*/
+
+//  there are threee ways to declare a variable in js
+// var, let and const
+//  var is going to use throughout your whole program
+//  let will only be used where you decalssed that 
+// const is a variable that can never change
+
+// This is how to assign a variable
+var a; // with a semi-colon
+//  this is how to declare a variable 
+var b = 2;
+
 var product = 8 * 10
 console.log(product);
 
@@ -98,7 +115,7 @@ var myTemStr = '<a href="http://ww.exapmle.com" target="_blank">Link</a>'
  CODE OUTPUT
 
  \' single qoute
- \"" doub;e quote
+ \"" double quote
  \\ backslash
  \n newline
  \r carriage return
@@ -107,3 +124,88 @@ var myTemStr = '<a href="http://ww.exapmle.com" target="_blank">Link</a>'
  \f form feed
 
  ****/
+
+ var mySlash = "FirstLine\n\t\\SecondLine\nThridLine"
+ console.log(mySlash);
+
+ var myStr = "This is the start. " + "This is the end."
+ 
+// you can also concatinate with +=
+var ourStr = "I come first"
+ourStr += "I come second."
+console.log(ourStr);
+
+// Only change code below this line
+
+var myStr = "This is the first sentence."
+
+myStr += " This is the first sentence."
+console.log(myStr);
+
+// Appending Variable to string
+var adAdjective = "awesome!";
+var ourStr = "freeCodeCamp is "
+ourStr += adAdjective
+console.log(ourStr);
+
+// LENGTH
+
+var firstNameLength = 0
+var firstName = "Ada"
+
+firstNameLength = firstName.length
+// 3
+console.log(firstNameLength);
+
+//  BRACKET NPTATION TO FIND FIRST CHARAcTER IN STRING
+
+var firstLetterOffirstName = ""
+var firstName = "Ada"
+
+firstLetterOffirstName = firstName[0]
+console.log(firstLetterOffirstName);
+// it starts countint from zero{0} = A, d = 1, a = 3 called zero based index 
+
+// step
+var firstLetterOffirstName = ""
+var lastName = "Lovelace"
+
+firstLetterOffirstName = lastName[0]
+console.log(firstLetterOffirstName);
+
+// STRING  IMMUTABILITY
+// string are immutable. which mean that they cannot be chnaged when altered
+// they cannot be altered whne created
+//   the way to chaneg a string is to reassign it
+
+var strChan = "Jello Woeld"
+
+strChan = "Hello World"
+
+//  Bracket Notation to Find the Nth Character  in String
+var firstName = "Ada"
+
+firstLetterOffirstName = firstName[2]
+//  Bracket Notation to Find the Last Character  in String
+var firstName = "Ada"
+var firstLetterOffirstName = firstName[firstName.length - 1]
+console.log(firstLetterOffirstName);
+// a it gets the last later
+
+var lastName = "Lovelace"
+var lastLetterOfLetterLastName = lastName[lastName.length - 1]
+
+console.log(lastLetterOfLetterLastName);
+//  e
+
+var secondToLastLetterOfLastNmae = lastName[lastName.length - 2]
+// to get the second to the lastname
+
+//  WORD BLANKS
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    var result = ""
+    result += "Them " + myAdjective + myNoun + myVerb + "to he store " + myAdverb
+
+    return result
+}
+console.log(wordBlanks("dog", "big", "ran", ""));
