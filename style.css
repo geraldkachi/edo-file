@@ -30,7 +30,8 @@ a {
 .herocontainer {
   background-color: white;
   min-height: 100.5vh;
-  /* background-color: violet; */
+  background-color: violet;
+  overflow: hidden;
 }
 header {
   background-color: white;
