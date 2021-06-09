@@ -204,8 +204,49 @@ var secondToLastLetterOfLastNmae = lastName[lastName.length - 2]
 //  WORD BLANKS
 function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
     var result = ""
-    result += "Them " + myAdjective + myNoun + myVerb + "to he store " + myAdverb
+    result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to he store " + myAdverb
 
     return result
 }
-console.log(wordBlanks("dog", "big", "ran", ""));
+console.log(wordBlanks("dog", "big", "ran", "quickly"));
+
+// Store Multiple Values with Arrays
+
+var ourArrays = ["John", 23];
+
+var myArrar = ["Quincy", 1 ] // Quincy is number one
+
+// Nested Array 
+// or its called multidimensional Array
+var ourArray = [["the universe", 42], ["ecerything", 101010]]
+
+var myArray = [["Bulls", 23], ["White Sox", 45]]
+
+// Access Array Data with indexes
+var ourArray = [50, 60, 70]
+var ourData = ourArray[0]
+console.log(ourData);
+
+var myArray = [50, 60 , 70]
+
+var thisArray = myArray[0]
+// console.log(thisArray);
+
+var myArray = [50, 60, 70]
+var myData = myArray[2]
+console.log(myData);
+
+// Modify Array Data With Indexes
+var ourArray = [18, 64, 99]
+ourArray[1] = 45
+console.log(ourArray);
+
+// Access Multi-Diemnional Arrys with Indexes [][]
+//  Arrays of Arrays
+var myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14]]
+// the first the array box gets the the firs set of arrays 
+// in the parent array which is [1, 2, 3]
+
+//  the second array gets the items in the first set fo array in the first child on the array selected
+// which is the [{1}, 2, 3]
+var myData = myArray[0][0]

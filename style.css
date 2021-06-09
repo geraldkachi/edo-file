@@ -94,7 +94,8 @@ nav ul li a {
   position: absolute;
   top: 20px; /* 0 */
   width: 70%;
-  min-height: 100%;
+  /* min-height: 100%; */
+  height: auto;
   margin-left: 120px;
   overflow: hidden;
 }
