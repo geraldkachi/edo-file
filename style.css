@@ -16,8 +16,11 @@ body {
 }
 @font-face {
   font-family: "Cera Pro";
-  src: url(/FontsFree-Net-cor3.ttf);
-  /* src: url(./cera-pro-sv); */
+  /* src: url(/FontsFree-Net-cor3.ttf); */
+  /* src: url(./cera-pro-sv/cera\ pro\ sv/Cera-Pro-Black.otf); */
+  /* src: url(./cera-pro-sv/cera\ pro\ sv/Cera-Pro-Light.otf); */
+  src: url(./cera-pro-sv/cera\ pro\ sv/Cera-Pro-Medium.otf);
+  /* src: url(./cera-pro-sv/cera\ pro\ sv/FontsFree-Net-cor3.ttf); */
 }
 a {
   text-decoration: none;
@@ -72,6 +75,7 @@ nav ul li a {
   justify-content: space-evenly;
   align-items: center;
   margin: 0 22px 0 129px;
+  /* overflow: hidden; */
 }
 .circleface {
   max-width: 100%;
@@ -102,7 +106,8 @@ nav ul li a {
   font-size: 55.32px;
   /* font-size: 62.32px; */
   /* font-weight: 700; */
-  font-family: "";
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
 }
 .create p {
   margin-top: 34px;
@@ -158,6 +163,7 @@ nav ul li a {
     display: block;
     margin: 0 52px 0 30px;
     width: auto;
+    overflow: hidden;
   }
   .circleface {
     margin-left: unset;
