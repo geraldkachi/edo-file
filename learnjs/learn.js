@@ -241,8 +241,9 @@ var ourArray = [18, 64, 99]
 ourArray[1] = 45
 console.log(ourArray);
 
-// Access Multi-Diemnional Arrys with Indexes [][]
+// Access Multi-Diemnional Arrys with Indexes [][]\
 //  Arrays of Arrays
+
 var myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14]]
 // the first the array box gets the the firs set of arrays 
 // in the parent array which is [1, 2, 3]
@@ -254,4 +255,26 @@ var myData = myArray[2][1]
 console.log(myData); //8
 
 // Manipulate Arrays with push()
+var ourArray = ["Stimpson", "Jee", "car"]
+ourArray.push(["happy", "joy"])
+console.log(ourArray);
+//  results // :::
+// ourArray now equals [ 'Stimpson', 'Jee', 'car', [ 'happy', 'joy' ]]
 
+var myArray = [["John", 23], ["cat", 12]]
+myArray.push(["LardGerald", 25])
+console.log(myArray);
+
+// Manipulate Arrays withs pop() this remove the last items
+// The array shift () is a built-in JavaScript function that removes the first element from the array and returns that deleted item
+// shift () removes an element at a specified position and shifts the remaining elements up. 
+
+
+// Pop, Push, Shift and Unshift Array Methods in JavaScript
+
+// pop() Remove an item from the end of an array. [removes last item]
+// push() Add items to the end of an array. [adds to the last item]
+
+// shift() Remove an item from the beginning of an array. [removes the first item]
+// unshift() Add items to the beginning of an array. [adds to the first item ]
+// https://alligator.io/js/push-pop-shift-unshift-array-methods/
