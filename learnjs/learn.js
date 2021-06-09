@@ -266,6 +266,11 @@ myArray.push(["LardGerald", 25])
 console.log(myArray);
 
 // Manipulate Arrays withs pop() this remove the last items
+// WE CAN remove an item with the pop() function. the last item
+var ourArray = [1, 2, 3]
+var removeFromOurArray = ourArray.pop()
+console.log(ourArray);
+
 // The array shift () is a built-in JavaScript function that removes the first element from the array and returns that deleted item
 // shift () removes an element at a specified position and shifts the remaining elements up. 
 
@@ -277,4 +282,60 @@ console.log(myArray);
 
 // shift() Remove an item from the beginning of an array. [removes the first item]
 // unshift() Add items to the beginning of an array. [adds to the first item ]
+
 // https://alligator.io/js/push-pop-shift-unshift-array-methods/
+
+
+// shift() Remove an item from the beginning of an array. [removes the first item]
+// Manipulate Arrays with shift()
+var ourArray = ["stimson", "J", ["cat"]]
+var removeFromOurArray = ourArray.shift()
+console.log( ourArray,removeFromOurArray);
+
+
+// unshift() Add items to the beginning of an array. [adds to the first item ]
+var ourArray = ["stimson", "J", ["cat"]]
+ourArray.shift()
+ourArray.unshift("stimson")
+
+var myArray = [["kachi", 24], ["john", 21]]
+myArray.unshift(["paul", 30])
+console.log(myArray);
+
+
+// Shopping List
+// another example of nested arrays 
+var myList = [["cereal", 3] ["milk", 2], ["bananas", 3], [["juice", 2], ["eggs", 12]]]
+
+// Write Reusable Code  with Functions 
+function functionName() {
+    console.log("Heyman kachman");
+}
+functionName()
+functionName()
+functionName()
+// 3 times
+
+function reuseableFunc() {
+    console.log("Hello wolrd");
+}
+reuseableFunc()
+
+// Passing  Values to functions with Arguments
+// parameters are variables that acts like a placeholders for the values that are to be input into the function when it is called
+
+function outFunc(a, b) {
+    console.log(a - b);
+}
+outFunc(10, 5)
+// Output 5
+
+function functionWithArgs(a, b) {
+    console.log(a + b);
+}
+functionWithArgs(10, 5)
+// Output 15
+
+// Global Scope and Functions
+// scope refere to the visibily of variables
+// variables which are defined outside a function are called global scope
