@@ -337,5 +337,24 @@ functionWithArgs(10, 5)
 // Output 15
 
 // Global Scope and Functions
+
 // scope refere to the visibily of variables
-// variables which are defined outside a function are called global scope
+// variables which are defined outside a function are called global scope. and has gloabl scope
+var myGlobal = 10;
+function func1() {
+    
+}
+
+function func2() {
+    var output = ""
+
+    if (typeof myGlobal != "undefined") {
+        output += "myGlobal: "  + myGlobal
+    }
+    if (typeof oopGlobal != "undefined") {
+        output += " oopGlobal: " + oopGlobal
+    }
+    console.log(output);
+}
+func1()
+func2()
