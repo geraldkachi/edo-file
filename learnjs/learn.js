@@ -295,8 +295,9 @@ console.log( ourArray,removeFromOurArray);
 
 // unshift() Add items to the beginning of an array. [adds to the first item ]
 var ourArray = ["stimson", "J", ["cat"]]
-ourArray.shift()
-ourArray.unshift("stimson")
+ourArray.shift("J")
+// ourArray.unshift("stimson")
+console.log(ourArray);
 
 var myArray = [["kachi", 24], ["john", 21]]
 myArray.unshift(["paul", 30])
@@ -343,18 +344,87 @@ functionWithArgs(10, 5)
 var myGlobal = 10;
 function func1() {
     
+    // when you do not use a var keyword it becomes a global scope automaticly
+    oopGlobal = 5
+    // and this can be use outside this function
 }
 
 function func2() {
     var output = ""
 
     if (typeof myGlobal != "undefined") {
-        output += "myGlobal: "  + myGlobal
+        output += "myGlobal: "  + myGlobal;
     }
     if (typeof oopGlobal != "undefined") {
-        output += " oopGlobal: " + oopGlobal
+        output += " oopGlobal: " + oopGlobal;
     }
     console.log(output);
 }
 func1()
 func2()
+
+// Local Scope and Functions
+function myLocal() {
+    var myVar = 5
+    console.log(myVar)
+}
+myLocal()
+
+// Global vs Local
+var outerWear = "T-Shirt" // this is a global scope and can be access anywhere
+
+function myOutfit() {
+    return outerWear
+}
+console.log(myOutfit());
+
+var outerWear = "T-Shirt" // this is a global scope and can be access anywhere
+
+function myOutfit1() {
+    var outerWear = "StringShirt"
+    return outerWear
+}
+console.log(myOutfit1());
+
+// Return a  Value from a Function with a Return
+function minusSeven(num) {
+    return num - 7
+}
+console.log(minusSeven(10));
+
+function timesFive(num) {
+    return num * 5
+}
+console.log(timesFive(5));
+
+// UnderStanding Undefined Vlaue Returened from a Function
+var sum = 5
+function addThree() {
+    return sum += 3
+     
+}
+addThree()
+// undefined
+
+// Assignment with a  Returned Values
+var changed = 0
+function change(num) {
+    return (num + 5) / 3
+}
+changed = change(10); // it is now stored in the changed variable
+// the values in the change function would be stored in the changed variable
+console.log(changed)
+
+// Stand  in LIne
+// que in  computer science
+// new items are being added to the back of the lien and old item are being reemoved from the line
+
+function nextInLine(arr, item) {
+    arr.push(item)
+    return arr.shift()
+}
+
+var testArr = [1,2,3,4,5]
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
