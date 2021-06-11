@@ -428,3 +428,159 @@ var testArr = [1,2,3,4,5]
 console.log("Before: " + JSON.stringify(testArr));
 console.log(nextInLine(testArr, 6));
 console.log("After: " + JSON.stringify(testArr));
+
+// Boolean Values
+// boolean is nathr data type in js and there are only two values, true and fasle
+//  true or false is like yes and no or like on and off
+function WelcometoBoolean() {
+    return true
+}
+// console.log(WelcometoBoolean());
+
+// Use Conditioal Logic with If Statements
+function ourTrueorFalse(isItTrue) {
+    if (isItTrue) {
+        return "Yes, ity is true"
+    }
+    return "No, Its is true"
+}
+console.log(ourTrueorFalse(false));
+function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue) {
+        return "Yes, ity is true"
+    }
+    return "No, Its is true"
+}
+console.log(trueOrFalse(true));
+
+// Comparison with the Equality Operator 
+// (==) this is to check if it is 12, this does a type conversion. it convert string to number
+// (=) this is to assign a value
+
+function testEqual(val) {
+    if (val == 12) {
+        return "Equal"
+    }
+    return "Not Equal"
+}
+console.log(testEqual(0));
+console.log(testEqual("0"));
+
+// Comparison with the Strict Equality Operator
+// this tries to compare the two types
+/* 
+    3 === 3 True
+    3 === "3" Fasle
+     both of these would be true if we were using the double (==)
+*/  
+function testStrict(val) {
+    if (val === 10 ) {
+        return "Equal"
+    }
+    return "Not Equal"
+}
+console.log(testStrict(10));
+
+
+// Practice Comparison Differece Values
+// we've practice this just a while back
+
+
+// Comparison with the Inequality Operator
+
+function testNotEqual(val) {
+    if (val != 10 ) {
+        return "Equal"
+    }
+    return "Not Equal"
+}
+console.log(testNotEqual("10"));
+
+// Comparison with the Strict InEquality Operator
+
+function testStrictNotEqual(val) {
+    if (val !== 10 ) {
+        return "Equal"
+    }
+    return "Not Equal"
+}
+console.log(testStrictNotEqual("10"));
+
+// Comparison with the Logical And Operator
+function testGreaterThan(val) {
+    if (val > 100) {
+        return "Over 100"
+    }
+    if (val > 10) {
+        return "Over 10"
+    }
+    return "Under 10"
+}
+console.log(testGreaterThan(10));
+
+// Comparison with Graeter Than or Equal to Operator
+function testGreaterThan(val) {
+    if (val >= 30) {
+        return "Over 100"
+    }
+    if (val > 10) {
+        return "Over 10"
+    }
+    return "Under 10"
+}
+console.log(testGreaterThan(10))
+
+// Comparison with Less Than or Equal to Operator
+
+function testLessThan(val) {
+    if (val <= 12) {
+        return "maller than or Equal to 12"
+    }
+    if (val <= 24) {
+        return "Smaller than or Equal to 24"
+    }
+    return "More than 24"
+}
+console.log(testLessThan(10))
+
+
+// Comparison with the Logical And Operator
+
+// function testLogicalAnd(val) {
+//     if (val <= 50) {
+//         if (val) {
+//             return "Yes"
+//         }
+//     }
+//     return "No"
+// }
+
+// using && operator
+
+function testLogicalAnd(val) {
+    if (val <= 50 && val <= 25) { // bath has to be true
+        return "Yes"
+    }
+    return "No"
+}
+//  this is better than nested if
+console.log(testLogicalAnd(10));
+
+// using OR comparison and Logical nOperator
+function testLogicalOr(val) {
+    if (val < 0 || val < 10) { // both doesnt have to be true
+        return "Yes it is"
+    }
+    return "No it isnt"
+}
+console.log(testLogicalOr(3));
+
+// Else If Statement
+
+function testElseIf(val) {
+    if (val < 10) {
+        return "greater than 10"
+    } else {
+        "Less Than 10"
+    }
+}
