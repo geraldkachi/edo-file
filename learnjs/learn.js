@@ -577,10 +577,50 @@ console.log(testLogicalOr(3));
 
 // Else If Statement
 
-function testElseIf(val) {
+function testElseIf(val) { // order is very important in this part
     if (val < 10) {
         return "greater than 10"
-    } else {
+    } else if (val < 5) {
         "Less Than 10"
+    } else {
+        return "Between 5 and 100"
+    }
+
+    // this is how it should be. from the lower number to the higher number 
+    if (val < 5) {
+        return "greater than 5"
+    } else if (val < 10) {
+        "Less Than 10"
+    } else {
+        return "Between 5 and 100"
     }
 }
+console.log(testElseIf(5))
+
+// Chaning If Else Statements
+
+function testSize(num) {
+    if(num < 5) { 
+        return "Tiny"
+    } else if (num < 10) {
+        return "Small"
+    }  else if (num < 15) {
+        return "Medium"
+    } else if (num < 20) {
+        return "Large"
+    } else if (num >= 20) {        
+        return "Huge"
+    }
+    return "Change Me"
+}
+console.log(testSize(7))
+
+/* 
+Write chanied if/else if statements to fulfill the following conditions
+
+num < 5 - return "Tiny"
+num < 10 - return "Small"
+num < 15 - return "Medium"
+num < 20 - return "Large"
+num >= 20 - return "Huge"
+*/ 
