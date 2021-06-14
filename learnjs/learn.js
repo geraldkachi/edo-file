@@ -624,3 +624,479 @@ num < 15 - return "Medium"
 num < 20 - return "Large"
 num >= 20 - return "Huge"
 */ 
+
+// Golf code 
+var names = ["Holes-in-one", "Eagle", "Birdle", "Par", "Bogey", "Double Bogey", "Cee"]
+function golfScore(par, strokes) {
+    if (strokes == 1) {
+        return names[0]
+    } else if (strokes <= par - 2) {
+        return names[1]
+    }
+     else if (strokes == par - 1) {
+        return names[2]
+    }
+     else if (strokes == par ) {
+        return names[3]
+    }
+     else if (strokes == par + 1 ) {
+        return names[4]
+    }
+     else if (strokes == par + 2 ) {
+        return names[5]
+    }
+     else if (strokes >= par + 3 ) {
+        return names[6]
+    }
+}
+console.log(golfScore(5, 4));
+
+// Switch Statements
+
+function caseInSwitch(val) {
+    var answer = ""
+    // is uses the strict equality operator ===
+    // alway remember to use break else it would run through
+    switch (val) {
+        case 1:
+            answer = "alpha"
+            break;
+        case 2:
+            answer = "beta"
+            break
+        case 3:
+            answer = "gamma"
+            break
+        case 4:
+            answer = "delta"
+            break
+        // default:
+        //     break;
+    }
+    return answer
+}
+console.log(caseInSwitch(3));
+
+/* write a swiicth statement which tests val and sets answer fro the  floowong conditiosn
+1 - "alpha"
+2 - "beta"
+3 - "gamma"
+4 - "delta"
+*/
+
+// Default Option in Swucth Statements
+//  the default option is kinda like else
+function switchOfStuff(val) {
+    var answer = ""
+    // is uses the strict equalti operator ===
+    // alway remember to use break else it would run through
+    switch (val) {
+        case "a":
+            answer = "apple"
+            break;
+        case "b":
+            answer = "bird"
+            break
+        case "c":
+            answer = "cat"
+            break
+        default:
+            answer = "Stuff"
+            break;
+    }
+    return answer
+}
+console.log(switchOfStuff("c"));
+
+// Multiple Identical Options in Swicth Statements
+
+function sequentialSizes(val) {
+    var answer = ""
+
+    // since we dont have a break for each it would go through them automaticly    
+    switch (val) {
+        // 1-3
+        case 1:
+        case 2:
+        case 3:
+            answer = "low"
+            break;
+            // 4-5
+        case 4:
+        case 5:
+        case 6:
+            answer = "mid"
+            break;
+            // 7-9
+        case 7:
+        case 8:
+        case 9:
+            answer = "high"
+            break;
+    
+        default:
+            break;
+    }
+    return answer
+}
+console.log(sequentialSizes(3));
+
+// Replacing If Else  chains wtth Switch
+
+function chainToSwitch(val) {
+    var answer = ""
+
+    switch (val) {
+        case "bob":
+            answer = "Marley"
+            break;
+        case 42:
+            answer = "The Answer"
+            break
+        case 1: 
+            answer = " Thereis no #1"
+            break
+        case 99: 
+            answer = "Missed me by this much!"
+            break
+        case 7: 
+            answer = "Ate Nine"
+            break
+        default:
+            break;
+    }
+
+    // changed if chaning to switch
+
+    if (val === "bob") {
+        answer = "Marley"
+    } else if (val === 42) {
+        answer = "The Answer"
+    } else if (val === 1) {
+        answer = " Thereis no #1"
+    } else if (val === 42) {
+        answer = "Missed me by this much!"
+    } else if (val === 42) {
+        answer = "Ate Nine"
+    }
+
+    return answer
+}
+console.log(chainToSwitch());
+
+// Returning BBoolean  Values from function
+
+function isLess(a, b) {
+    if (a < b) {
+        return true
+    } 
+    // else {
+    //     return false
+    // }
+    return false
+}
+//  0R 
+//  this is really cool
+function isLes(a, b) {
+    return a < b
+}
+// console.log(isLes(1, 2));
+
+// Returning Early Pattern From Function
+
+function abTest(a, b) {
+
+    if (a < 0 || b < 0) {
+        return undefined    
+    }
+
+    return Math.random(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2))
+}
+console.log(abTest(-2, 2));
+
+console.log(abTest());
+
+// Counting Cards
+
+var count = 0
+
+function cc(card) {
+    var count = 0
+    switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;
+            break;
+        case 10:
+        case "J":
+        case "Q":
+        case "K":
+        case "A":
+            count--;
+            break;
+    }
+
+    var holdbet = "Hold"
+    if (count > 0) {
+        holdbet = "Bet"
+    }
+
+    return count + " " + holdbet;
+}
+// gerald more on this. 1:47:31
+cc(2); cc(3); cc(7); cc("K"); cc("A")
+console.log(cc(4));
+
+// Build Javascript objects
+
+// objects {} are similiar to arrays except that they instead of using index to access data. we use properties
+
+// properties are everything before the semi-colon and the values and those things after the semi-colon
+var ourDog = {
+    // "properties": values
+    "name" : "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything!"]
+}
+
+var myDog = {
+    "name": "Quincy",
+    "legs": 3,
+    "tails": 2,
+    "friends": []
+}
+
+// Accessing Objects Properties with Dot Notations
+// there are two main ways to access a properties on an object
+// Dot Notation. i.e dot or a period
+// Bracket Notation
+
+var testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+}
+
+var hatValue = testObj.hat
+var shirtValue = testObj.shirt
+// clo or log
+console.log(hatValue, shirtValue)
+
+// Accessing Object Properties with Bracket Notation
+// besides using dot notation you can also use Bracket notation
+
+// for bracket notation should be used when there is space in the propertie eg like
+// you can use bracket notation anytime but it is required  tht when the properties has a space in it then it is best to use
+// "an entree": "hamburguer"
+
+var testObj = {
+    "an entree": "hamburguer",
+    "my side": "veggies",
+    "the drink": "water"
+}
+var entreeValue = testObj["an entree"]
+var drinkValue = testObj["my side"]
+console.log(entreeValue, drinkValue)
+
+// Accessing Object properties with Variables 
+// bracket notation can alos be used to look up object properties using variables
+ var testObject = {
+     12: "Namath",
+     16: "Montana",
+     19: "Unitas"
+ }
+
+ var playerNumber = 12
+ var player = testObject[playerNumber]
+ console.log(player);
+
+ // Updating Objevt Properties
+//  we can use dot notation to update object properties
+
+var ourDog = {
+    "name": "Quincy",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything"]
+}
+
+ourDog.name = "Happy Camper"
+
+var myDog = {
+    "name": "Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["Techinnover Campers"]
+}
+
+myDog.name = "Happy Coder"
+console.log(ourDog, myDog)
+
+// = assignment
+// == loose. e.g  3 == "3". same result 
+// === strict type 3 === 3 same result
+
+
+// Add New Properties to an Object
+// you can add new propertoes using dot notation or bracket notaion
+
+var ourDog = {
+    "name": "Quincy",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything"]
+}
+// dot notation to add a property
+ourDog.bark = "bow-wow"
+
+
+var myDog = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["Techinnover Campers"]
+}
+// bracket notation to add a property
+
+myDog["bark"] = "woof!"
+
+
+
+// Delete Property from an Object
+// dot notation to delete a property
+// using the delete keyword
+var ourDog = {
+    "name": "Quincy",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything"],
+    "bark": "bow-wow"
+}
+
+delete ourDog.bark
+console.log(ourDog);
+
+
+// bracket notation to delete a property
+var myDog = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["Techinnover Campers"],
+    "bark": "woof!"
+}
+delete myDog.friends
+console.log(myDog);
+
+// Using Object for  lookups
+//  object can be thought of as a key value storage like a dictionary 
+// you can use a object to look up stuffs like a dictionary
+
+
+function phoneticLookup(val) {
+    var result = ""
+
+    var lookup = {
+        "alpha": "Adams",
+        "bravo": "Boston",
+        "charlie": "Chicago",
+        "delta": "Denver",
+        "echo": "Easy",
+        "foxtrot": "Frank"
+    }
+    result = lookup[val]
+    return result
+
+    // switch (val) {
+    //     case "alpha":
+    //         result = "Adams"
+    //         break;
+    //     case "bravo":
+    //         result = "Boston"
+    //     case "charlie":
+    //         result = "Chicago"
+    //     case "delta":
+    //         result = "Denver"
+    //     case "echo":
+    //         result = "Easy"
+    //     case "foxtrot":
+    //         result = "Frank"
+    // }
+}
+
+console.log(phoneticLookup("charlie"));
+
+
+// Testing Objects for Properties
+// has own property method
+// hasOwnProperty()
+// hasOwnProperty() method returns a boolean indicating whether the object has the specified property
+// you can check if an object has its properties with a hasOwnProperty() property method
+ var myObj = {
+     gift: "pony",
+     pet: "kitten",
+    bed: "sleigh",
+ }
+
+ function checkObj(checkProp) {
+     if (myObj.hasOwnProperty(checkProp)) {
+         return myObj[checkProp]
+     } else {
+        return "Not Found!"
+     }
+    // return "Change Me!"
+ }
+console.log(checkObj("gift"));
+
+// Manipulating Complex Objects
+// a js object is a way to store flexible data 
+// you can store strings number arrys and even objects
+
+var myMusic = [
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "LP",
+        ],
+        "gold": true
+    },
+    // Add record here
+    {
+        "artist": "Beu Carnes",
+        "title": "Ceral Man",
+        "release_year": 2004,
+        "formats": [
+            "YouTube Video"
+        ]
+    }
+]
+
+// Accessing Nested Objects
+
+var myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passager seat": "crumbs"
+        },
+        "outside": {
+            "trunk": "jack"
+        }
+    }
+}
+// becos there is a space{"glove box"} we have to use the bracket notation
+var gloveBoxContents = myStorage.car.inside["glove box"]
+
+console.log(gloveBoxContents);
+//  awesome learnt alot 
+
+
+// Accessing Nested Arrays
