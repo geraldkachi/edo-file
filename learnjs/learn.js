@@ -1100,3 +1100,202 @@ console.log(gloveBoxContents);
 
 
 // Accessing Nested Arrays
+// arrays brackets notation can be changed to access nestes arrays
+
+var myPlants = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "tulip",
+            "dandelion"
+        ]
+    },
+    {
+        type: "trees",
+        list: [
+            "fir",
+            "pine",
+            "birch"
+        ] 
+    }
+]
+
+var secondTree = myPlants[1].list[1]
+console.log(secondTree);
+
+// record Collection
+
+var collection = {
+    "2548": {
+        "album": "Slippery when Wet",
+        "artist": "Bon Jovi",
+        "tracks": [
+            "Let It Rock",
+            "You Give Love a Bad Name"
+        ]
+    },
+    "2468": {
+        "album": "1999",
+        "artist": "Prince",
+        "tracks": [
+            "1999",
+            "Little Red Corvette"
+        ]
+    },
+    "1245": {
+        "artist": "Robert Palmer",
+        "tracks": [ ]
+    },
+    "5439": {
+        "album": "ABBA Gold",
+    },
+}
+
+// this is a way in js to make a copy od the of 0bject
+// if the value is an empty string then it it deleted the value from the object automaticly 
+
+var collectionCopy = JSON.parse(JSON.stringify(collection))
+
+function updateRecords(id, prop, value) {
+    if (value === "") {
+        delete collection[id][prop]
+    } else if(prop === "tracks") {
+        collection[id][prop] = collection[id][prop] || [];
+        collection[id][prop].push(value);
+    } else {
+        collection[id][prop] = value;
+    }
+
+    return collection
+}
+
+updateRecords(2468, "tracks", "test")
+console.log(updateRecords(5439, "artist", "ABBA"));
+
+//  Iterat With While Loop
+// loops allows you to run the same code multiple times
+//  while loop that runs while a specified condition is true and stops once its no longer true
+
+ var myArray = []
+var i = 0
+ while(i < 5) {
+    myArray.push(i)
+    i++
+    // i++ this. to make sure the loop eventually ends i increments and goes against the condition
+ }
+
+ console.log(myArray);
+
+ // Iterate with For Loop
+//  A For Loop is a common loop in javascript  2:12:16
+// initializtion condition and incremet
+
+var ourArray = []
+let array = 5
+for (let i = 0; i < array; i++) {
+    ourArray.push(i)
+}
+// console.log(ourArray);
+
+var myArray = []
+for (var i = 0; i < 6; i++) {
+    // myArray.unshift(i)
+    myArray.push(i)
+}
+console.log(myArray);
+
+// Itertion Odds Numbers with a For Loop
+
+var ourArray = []
+
+// even number
+for (let i = 0; i < 10; i +=2) {
+    ourArray.push(i)
+}
+console.log(ourArray);
+
+//Odd number sincw we are starting from 1
+
+var ourArray = []
+
+for (let i = 1; i < 10; i +=2) {
+    ourArray.push(i)
+}
+console.log(ourArray);
+
+// Count Bcakwards witha a For Loop
+
+var backArray = []
+
+for (let i = 10; i > 0; i -=2) {
+    backArray.push(i)
+}
+console.log(backArray);
+////////////
+
+var backArray = []
+
+for (let i = 9; i > 0; i -=2) {
+    backArray.push(i)
+}
+console.log(backArray);
+
+
+// Iterate Through an Array with a For Loop
+
+var ourArr = [9, 10, 11, 12]
+var outTotal = 0
+
+for (let i = 0; i < ourArr.length; i++) {
+    outTotal += ourArr[i];
+    // we are adding ourTotal to whatever is in the array
+}
+console.log(outTotal); //42
+//////////////
+
+var myVar = [2, 3, 4, 5, 6]
+var total = 0
+
+for (let i = 0; i < myVar.length; i++) {
+    total += myVar[i]
+}
+console.log(total);
+
+// Nesting Fot Loop
+// arrays inside an array
+
+function multilyAll(arr) {
+    var product = 1
+
+    for (var i = 0; i < arr.length; i++ ){
+        for(var j = 0; j < arr[i].length; j++) {
+            product *= arr[i][j];
+        }
+    }
+    return product
+}
+
+var product = multilyAll([[1,2], [3,4], [5,6,7]])
+console.log(product);
+
+// Iterate with D0... While Loops
+// Do while Loop
+
+var myArry = []
+
+var i = 10
+// while (i < 5) {
+//     myArray.push(i)
+//     i++;
+// }
+// console.log(myArry);
+
+ // how to do do do wheil e loop 
+ do {
+    myArray.push(i)
+    i++;
+} while (i < 5)
+console.log(i, myArry);
+
+// Profile LookUp  2:27
