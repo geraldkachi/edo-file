@@ -1292,6 +1292,8 @@ var i = 10
 // console.log(myArry);
 
  // how to do do do wheil e loop 
+
+//  this will always run atleast once before it checks the conditiosn
  do {
     myArray.push(i)
     i++;
@@ -1299,3 +1301,148 @@ var i = 10
 console.log(i, myArry);
 
 // Profile LookUp  2:27
+
+var contacts = [
+    {
+        firstName: "Akira",
+        lastName: "laine",
+        number: "12345678",
+        likes: ["Pizza", "Coding", "Brwnie Points"],
+    },
+    {
+        firstName: "Harry",
+        lastName: "Potter",
+        number: "12345678",
+        likes: ["Pizza", "Coding", "Green Points"],
+    },
+    {
+        firstName: "Sherlock",
+        lastName: "Holmes",
+        number: "1234569",
+        likes: ["Pizza", "Coding", "black Points"],
+    },
+    {
+        firstName: "Kris",
+        lastName: "Vos",
+        number: "12345678",
+        likes: ["Pizza", "Coding", "red Points"],
+    },
+]
+
+function lookupProfile(name, prop) {
+    for (let i = 0; i < contacts.length; i++) {
+        if (contacts[i].firstName === name) {
+            return contacts[i][prop] || "no such property";
+        }
+        return "No such contact"
+    }
+}
+
+var data = lookupProfile("Sherlock", "lastName")
+console.log(data);
+
+
+// Generate random Fractions
+// there is a simple to generate a random number it's with Math.random()
+
+function randomFunc() {
+    
+
+    return Math.random()
+}
+
+console.log(randomFunc());
+
+// Generate Random Whole Numbers
+//  often you would want a randowm whle number intstead of a random decimal number
+
+var randomNumberBtw0and19 = Math.floor(Math.random() *  20)
+// floor() this rounds down to the nearest whole number
+// Math.random() can never be 1 its a 0.236376 a decimal number 
+
+function randomWholeNum() {
+    
+    return Math.floor(Math.random() * 20)
+}
+console.log(randomWholeNum());
+
+
+
+// Generate Random Whole Numbers with  a Range
+
+function ourRandomWholeNumRange(ourMin, ourMax) {
+    
+    return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin
+}
+console.log(ourRandomWholeNumRange(5, 15));
+
+
+function randomRange(myMin, myMax) {
+    
+    return Math.floor(Math.random() * (myMax - myMin))
+}
+console.log(randomRange(5, 15));
+
+
+// Use  the PasrseInt Function
+//  another useful function is the parseInt function
+//  parseIntr take a string and returns it as an integer
+
+function convertToInteger(str) {
+    return parseInt(str)
+}
+// if the string cannot be converted to an interger to returns NaN
+
+console.log(convertToInteger("56"));
+
+// Use the parseInt fnction with a  Radix
+// parseInt function can also be used with a Radix
+// the Radix specify the base of a number in a String
+// base7 base9 base2 is binary
+// example of (binary base 2) number 1s and 0s  = 10011
+//  the default of a number  is base 10
+
+function converToInteger(str) {
+    return parseInt(str, 2)  // base 2 was specified
+}
+console.log(converToInteger("10011")); // convert this  string of binary which is a base 2 to an actual number of base two which is a base 2number 
+
+// Use the  Conditional (Ternary)  Operator
+// ternary is like a one line if and else condition
+// condition ? statemen-if-true : statement-if-false
+
+function checkEqual(a, b) {
+    if (a === b) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(checkEqual(1,2));
+
+// ternary
+function ternarycheckEqual(a, b) {
+    return a === b ? true :  false 
+    // we would never write codes like this in re lie becos 
+    //  this does the same thing
+    // return a === b
+}
+
+console.log(checkEqual(1,2));
+
+// Use MultipleConditional  (Ternary) Operators
+// one of the grate thing aboy ternary operator you can nest them amonst themselves and it give them even mlre power
+
+function checSign(num) {
+    return num > 0 ? "Positive" : num < 0 ? "negative" : "zero"
+}
+    
+console.log(checSign(0));
+
+// Difference Between the var and let Keywords
+// of r along time in js if you wnat to declare a var you would have to use the var keyworld
+// but starting with es6 in 2015 we can not declare a variable with let and const 
+
+// let does not let you declare a variable twice
+
+// we are going to change all the var to let 
