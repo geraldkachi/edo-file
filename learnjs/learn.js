@@ -1446,3 +1446,153 @@ console.log(checSign(0));
 // let does not let you declare a variable twice
 
 // we are going to change all the var to let 
+
+let catName = "Quincy"
+let quote
+
+// let catName = "Beau"
+ catName = "Beau"
+
+function catTalk() {
+    //"use strict" this enables strict mode which catches common coding mistakes in an unsafe action
+    // alot of  people will use "use strict" at the top of the file or in a function
+   // "use strict"  // this is used for strict checking in vanilla js
+
+    catName = "Oliver";
+    quote = catname + " say Meow"
+}
+
+// if owuld give an error when you use let to asign a variable twice
+console.log(catName);
+
+
+//Compare  Scope of the var and ley keywords
+// when u declare a varivale with avr it is decalred globally  or lovally if it is declared inside a function
+
+function checkScope() {
+    "use strict"
+    let i = "function scope"
+
+    if (true) {
+        let i = "block scope"
+        console.log("Block Scope i is: ", i);
+    }
+    console.log("Function Scope i is: ", i);
+    // return i
+}
+// console.log(checkScope());
+
+// Declare a Read-Only Variable with the  const keyword
+// const is another way to declare a variable it has all the features of let. but it is also Read-Only you cannot reassign a const
+// when using const is it very common to use all capital letters
+// for the most part yoyu should only use const and let
+
+function printManyTimes(str) {
+    "use strict"
+
+    // var and let can be reassign, but not const 
+    var sentence = str + " is cool!"
+
+    sentence = str + " is amazing!"
+
+    for (let w = 0; w < str.length; w+=4) {
+        console.log(sentence);
+    }
+    // return sentence
+}
+// console.log(printManyTimes("freecodeFcamp"));
+
+// Muatate an Array Decalre with const
+// you cannot reassign a cvaribel declared wth cons but yu can mutate the array
+
+const s = [5, 7, 2]
+function editInPlace() {
+    "use strict"
+
+    // s = [2, 5, 7] // we can not reassign s.. it was asign with a const but we can mutate(or update the array using []bracket notation) the 
+    s[0] = 3
+    s[1] = 3
+    s[2] = 3
+
+} 
+editInPlace()
+console.log(s);
+
+// Prevent Object Mutation
+// a const declaration alone doest really protect your data from mutation
+
+function freezeObcj() {
+    "use strict"    
+    const MATH_CONSTANTS = {
+        PI: 3.14
+    };
+    // there is  something called Object.freeze that will prevent data mutation
+    // but we don't want the objcet PI to change. so we use Object.freeze()
+
+    Object.freeze(MATH_CONSTANTS) // this will prevent it from mutating
+    // whenever you have an object and you dont whant any of the items in the bjhect to change use Object.freeze()
+
+    try {
+        MATH_CONSTANTS.PI = 99
+    } catch (error) {
+        console.log(error);
+    }
+    return MATH_CONSTANTS
+}
+
+const PI = freezeObcj()
+console.log(PI);
+
+// Use Arrow Function to Write Concise Anonymous Functions () =>
+// this is function here is called an Anonymous Functions
+var magic = function() {
+    return new Date()
+} 
+// instead of this use arrow function
+var magic = () => {
+    return new Date()
+} 
+
+// we can sharten this even more
+// we not gonna use var.. we use const
+// var magic = () => new Date()
+const magicly = () => new Date()
+// console.log(magic);
+
+// Write Anonymous Functions  with Parameters just like an Anonymous Functions you can pass arguements to arrow function
+// convert this into an arrow func
+
+var myContactq = function(arr1, arr2) {
+    return arr1.concat(arr2)
+    // concat() means to join or link together in a chain
+}
+console.log(myContactq([1,2], [3, 4, 5]));
+
+const myContact = (arr1, arr2) => arr1.concat(arr2)
+// concat() means to join or link together in a chain
+console.log(myContact([1,2], [3, 4, 5]));
+
+// arrow functions works really well with higher order functions
+// such as map filter, reduce find etc
+
+//   the main thing to know is that they take functiosn as arguement for processinfg collections of data
+// whenere one function take in another function as an arguement thats a good time an arrow function
+
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]
+
+// const squareList = (arr) => {
+//     const squareIntegers = arr
+//     return squareIntegers
+// }
+
+// const squareIntegers = squareList(realNumberArray)
+// console.log(squareIntegers);
+
+
+const squareList = (arr) => {
+    const squareIntegers = arr.filter(num => Number.isInteger(num) && num > 0)
+    return squareIntegers
+}
+
+const squareIntegers = squareList(realNumberArray)
+console.log(squareIntegers);
