@@ -1588,11 +1588,374 @@ const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]
 // const squareIntegers = squareList(realNumberArray)
 // console.log(squareIntegers);
 
-
+// we want to get the integer from the array.. a new array and we want to square of the new number in that array
 const squareList = (arr) => {
-    const squareIntegers = arr.filter(num => Number.isInteger(num) && num > 0)
+    const squareIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x)
     return squareIntegers
 }
 
 const squareIntegers = squareList(realNumberArray)
 console.log(squareIntegers);
+
+// Write Higher Order Arrow Function
+// A Higher-Order function is a function that receives a function as an argument otherwise returns function as output. Higher-Order Arrow function implies using arrow functions (in ES6) along with Higher-Order functions
+// In JavaScript, function parameters default to undefined
+
+const increment = (function() {
+    return function increment(number, value = 1) {
+        return number + value
+    }
+}) ();
+
+console.log(increment(5, 2));
+console.log(increment(5));
+
+const incrementq = (function() {
+    return function increment(number, value = 1) {
+        return number + value
+    }
+}) ();
+
+console.log(incrementq(5, 2));
+console.log(incrementq(5));
+// this des the same thing and it doesnt have to be the samw function name
+
+// Use the Rest Operator with Function Parameters
+// The Rest Operator is Three Dots
+// The Rest Operator allows you to create a function that take a avraible numbner 
+
+const summ = (function() {
+    return function summ(x, y, z) {
+        const args = [x, y, z] // oncw we use the rest (...) we no longer declare this array
+        return args.reduce((a, b) => a + b, 0)
+    }
+}) ();
+
+
+const sum1 = (function() {
+    return function sum1(...args) {
+        return args.reduce((a, b) => a + b, 0)
+    }
+}) ();
+// before we can only pass in three argumenst but now we can have any amount of arguements
+// console.log(sum1(1, 2, 3))
+console.log(sum1(1, 2, 3, 6))
+
+// git status to check the latest update when woekung on a project with your collegues
+
+// gt pull on main or master... dont work on master always branch off
+
+// git branch    shows you how many branches you have 
+
+// then create another branch 
+// git branch littlefeature
+
+// to checkout into another / any branch 
+// git checkout littlefeature   now you are on litlefeature branch
+
+
+// Use the Spread Operatorto Evaluate Array In-Place
+// the spread operator looks just liek rhe rest operator with ... dots
+// but it expends in already existing arrays or it spreas out an arrays
+// so it take an array and it soreads it out into an individual parts
+
+const arr1 = ["jan", "feb", "mar", "apr", "may"]
+let arr2;
+(function() {
+    arr2 = [...arr1]
+    arr1[0] = "potato"
+})()
+console.log(arr2);
+
+// rest parameter
+const double = (num1, num2, num3) => {
+    // do something
+}
+// the rest parametner look like that (...nums)
+const doubleRest = (...nums) => { //  it bundle sthem up into a single array parameter
+    // do something
+    console.log(nums);
+    return nums.map(num => num * 2)
+}
+const restresults = doubleRest(1, 2, 3, 4, 6,8)
+console.log(restresults);  // its now going to be a single parament which is now going to be an array
+
+
+// spread syntax (arrays) this is simipler but it kinda works the opposite way
+const peoplespreadarr = ["shaun", "ryu", "cryted" ]
+const memeberspread = ["maria", 'chun-li', ...peoplespreadarr]
+
+const peoplezepread = ["jan", "feb", "mar", "apr", "may"]
+// this take a an arrays and spread it into an individual item
+console.log(...peoplezepread, memeberspread);
+
+// spread syntax with objects
+
+const personObj = {name: "shaun", age: 30, job: "net ninja"}
+// const personclone = personObj
+const personclone = {...personObj, location: "lagos"}
+// console.log(personclone);
+/// this is a better way of creating a copy of a brand new object
+
+
+// Use Destructuring Assignment to Assign Variable
+
+var voxel = {x: 3.6, y: 7.4, z: 6.54 }
+
+// this si the old way of getting values from an objcet
+var x = voxel.x
+var y = voxel.y
+var x = voxel.x
+
+// the newer way to destructure this 
+// const {x: a, y: b, z: c } = voxel 
+// the is a quicker way of assigning thing from an objevt inti an variabke
+// copy x to a , copy y to b, and z to c
+
+const AVG_TEMPERATURES = {
+    today: 77.5,
+    tomorrow: 79
+}
+
+function getTempOfTmrw(avgTemperatures) {
+    "use strict";
+
+    const { tomorrow: tempOfTomorrow } = avgTemperatures
+    return tempOfTomorrow
+}
+
+console.log(getTempOfTmrw(AVG_TEMPERATURES));
+
+// Destructuring Assignment wiyj Nested Objects
+
+const LOCAL_FORCAST = {
+    today: { min: 72, max: 83 },
+    tomorrow: { min: 73.3, max:  84.6 }
+}
+
+function getMaxOfTmrw(forcast) {
+    "use strict";
+
+    const { today: {min: maxOfTomorrw}} = forcast
+    return maxOfTomorrw
+}
+
+console.log(getMaxOfTmrw(LOCAL_FORCAST));
+
+// Use Destructuring  Assignments to Assign Variable from Arrays
+
+// when an array is equLal to an array
+const [z, q, , w] = [1,2,3,4,5,6,7]
+console.log(z, q, w);
+
+var a = 8, b = 6;
+(() => {
+    "use strict";
+    [a, b] = [b, a ]
+    // now it ts switching the places. a = b am=nd b = a
+})();
+console.log(a);
+console.log(b);
+
+// Use Destructuring Assignmnet with the Rest Operator
+
+const source = [1,2,3,4,5,6,7,8,9,10]
+
+function removeFirstTwo(list) {
+    // const arr = list   
+    // two remove the the first woo item in the array 
+    // i just have  put two commas [, , ...arr]
+    // it is saying do notjhing fro the first element and do nothing fro the second element
+
+    // and we could also assign a variave in it like. a will be 1 and b will be 2
+    // const [a, b, ...arr] = list   
+    
+    const [, , ...arr] = list   
+
+    return arr
+}
+
+const arr = removeFirstTwo(source)
+console.log(arr);
+console.log(source);
+
+
+// Use Destructuring  Assignments to Pass an Object  as a function's Paramnets
+
+const stats = {
+    max: 56.78,
+    standard_devaition: 4.34,
+    median: 34.54,
+    mode: 23.87,
+    min: -0.75,
+    average: 35.85
+}
+
+// instead of pass the the entire stats we can just pass in what we need
+// destruture { max, min }
+const half1 = (function() {
+    return function half({ max, min }) {
+        return (max + min) / 2.0
+    }
+})()
+const half = (function() {
+    return function half(stats) {
+        return (stats.max + stats.min) / 2.0
+    }
+})()
+console.log(stats);
+console.log(half(stats), half1(stats));
+
+// Ctreate String using Template Literals.. back ticks {``}
+
+const personPlate = {
+    name: "Zodiac Hasbro",
+    age: 56
+}
+// advantages of using template string is that we can wrint mulitple line
+// another thing is the you can add double or single quatationss, and we can put in a variable another thing inside 
+// a dollar sign ${personPlate.name or age}
+// amdit prints or log with a new like 
+const greeting = `Hello, my name is ${personPlate.name}! 
+I am ${personPlate.age} years old.`;
+
+
+console.log(greeting);
+
+
+const ResultTemplePlate = {
+    succuess: ["max-lenght", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["id-blacklist", "no-dup-keys"],
+}
+
+function makeList(arr) {
+    const resultDisplayArray = [];
+    for (let p = 0; p < arr.length; p++) {
+        resultDisplayArray.push(`<li class="text-warning>${arr[p]}</li>`)
+    }
+
+    return resultDisplayArray
+}
+
+const resultDisplayArray = makeList(ResultTemplePlate.failure)
+console.log(resultDisplayArray);
+
+// makeList(resultDisplayArray.failure) should return
+// [
+//     `<li class="text-warning>no-var</li>`
+//     `<li class="text-warning>var-on-top</li>`
+//     `<li class="text-warning>linebreak</li>`
+// ]
+
+// Write Concise Object Litral Declaration Using  Simple Fields
+
+const createPerson = (name, age, gender) => {
+
+    // if you know that you want to create an object which the key is the same as the variable
+
+    // return { 
+    //     name: name,
+    //     age: age,
+    //     gender: gender
+    // }
+    return { name, age, gender }
+}
+const createPersonSHort = (name, age, gender) => ({ name, age, gender })
+console.log(createPerson("kachi", 26, "male"), createPersonSHort("kachi", 26, "male"));
+
+
+// Write Concise Declarative Function
+// an d objcet can contain a fucntion
+
+const bicycle = {
+    gear: 2,
+    gear1: 5,
+    // another way to set a function in an object
+    // setGear: function(newGear) {
+    //     "use strict";
+    //     this.gear = newGear;
+    // },
+    // or
+    setGear(newGear) {
+        "use strict";
+        this.gear = newGear;
+       },
+    // or
+    setGear1: (newGear) => {
+        // "use strict";
+        this.gear1 = newGear;  // work i=on this
+    }
+}
+bicycle.setGear(3)
+bicycle.setGear1(9)
+console.log(bicycle.gear);
+console.log(bicycle.gear1);
+
+// Use class  syntax to define a constructor  Function 
+
+// var SpaceShuttle = function(targetPlant) {
+//     this.targetPlant = targetPlant
+// }
+
+// var zeus = new SpaceShuttle('jupiter')
+// console.log(zeu.targetPlants);
+
+// using class
+class SpaceShuttle { 
+    constructor(targetPlant) {
+    this.targetPlant = targetPlant
+    }
+}
+
+var zeus = new SpaceShuttle('jupiter')
+console.log(zeus.targetPlants);
+
+
+
+// func
+// function makeClass() {
+//     return Vegetable;
+// }
+
+// const Vegetable = makeClass()
+// const carrot = new Vegetable('carrot')
+
+// class
+function makeClass() {
+    class Vegetable {
+        constructor(name) {
+            this.name = name
+        }
+    }
+    return Vegetable;
+}
+
+const Vegetable2 = makeClass()
+const carrot = new Vegetable2('carrot')
+console.log(carrot.name);
+
+// Use getters and  setters to Control Access to an Object
+
+// when ever uou use _ in a variable it means it a private variable that you are not suppose to use it outside that scope or outside of that class
+
+
+
+
+
+
+// Understanding the difference btw import and require
+import {capitalizeString} from "./capitalizeString"
+const cap  = capitalizeString('Hello')
+
+console.log(cap);
+
+// Use export to Reuse a Code  Block
+
+// import everything *
+import * as capitalizeStrings from "./capitalizeStrings"
+
+// Create an Export Fallback with export default
+// it is only used when you want to export only one thing frm a file
+
+export default function subtract(x, y) { return  x - y}
