@@ -1945,7 +1945,7 @@ console.log(carrot.name);
 
 
 // Understanding the difference btw import and require
-import {capitalizeString} from "./capitalizeString"
+// import { capitalizeString } from "./capitalizeString"
 const cap  = capitalizeString('Hello')
 
 console.log(cap);
@@ -1953,9 +1953,13 @@ console.log(cap);
 // Use export to Reuse a Code  Block
 
 // import everything *
-import * as capitalizeStrings from "./capitalizeStrings"
+// import * as capitalizeStrings from "./capitalizeStringcapitalizeStrings"
 
 // Create an Export Fallback with export default
 // it is only used when you want to export only one thing frm a file
 
-export default function subtract(x, y) { return  x - y}
+// export default function subtract(x, y) { return  x - y}
+
+// Import a Default Export
+const FuckSub =  subtract(7, 4)
+console.log(FuckSub);
