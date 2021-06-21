@@ -1876,16 +1876,18 @@ const bicycle = {
     //     "use strict";
     //     this.gear = newGear;
     // },
-    // or
+    // or, this key word would be assign as the object bicycle
     setGear(newGear) {
         "use strict";
         this.gear = newGear;
-       },
+       },  // this is the better way to wring function in an object
     // or
-    setGear1: (newGear) => {
+    // arrow function works differently with the this key work
+    // we are not suppose to use the arrow function in an object
+    // setGear1: (newGear) => {
         // "use strict";
-        this.gear1 = newGear;  // work i=on this
-    }
+        // this.gear1 = newGear;  // work on this
+    // }
 }
 bicycle.setGear(3)
 bicycle.setGear1(9)
